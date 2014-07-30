@@ -1,0 +1,67 @@
+@font-face
+{
+font-family: Baskerville;
+src: url('BASKVILL.ttf'); /* IE9 */
+}
+div.page-wrap{
+	font-family:Baskerville;
+	border-top: 3px solid #732417;
+	background:url(../img/bg.jpg) repeat-x white;
+}
+
+#school_logo{
+	border:none;
+	box-shadow:none;
+	background:none;
+}
+#school_logo>img{
+	margin-right:0px;
+	width:120px;
+}
+#school_info{
+	margin-top: 35px;
+}
+#school_name{
+	margin-bottom: 0px;
+}
+#school_address{
+	font-size: 20px;
+}
+#hia-footer{
+	text-align: center;
+}
+.nav-tabs{
+	margin:0px;
+	border-bottom:1px solid #ada788;
+}
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover {
+	border:1px solid #ada788;
+	border-bottom-color: transparent;
+}
+.nav > li > a:hover {
+	background-color:#fff;
+	border:1px solid #ada788;
+}
+.tabbable{
+	padding:20px;
+}
+.tabbable>div.tab-content{
+	min-height:350px;
+	padding:15px 10px;
+	border:1px solid #ada788;
+	border-top:none;
+	background: #ffffff; /* Old browsers */
+	box-shadow: 7px 6px 7px -6px black;
+}
+	
+}
+a.thumbnail{
+	background:#fff;
+}
+a{
+	color:#3a2d21;
+}
+a:hover{
+	color:#2c2117;
+}
+
