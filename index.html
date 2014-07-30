@@ -5,8 +5,25 @@
 	<!-- Bootstrap -->
 	  <link href="css/bootstrap.min.css" rel="stylesheet">
 	  <link href="css/hia.css" rel="stylesheet">
+	  
 
+	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCJK4Dks5cSvzH4aV-YMgUOtesH7Fi-4hg&sensor=false"></script>
+	<script>
+		function initialize()
+		{
+		var mapProp = {
+		  center:new google.maps.LatLng(51.508742,-0.120850),
+		  zoom:5,
+		  mapTypeId:google.maps.MapTypeId.ROADMAP
+		  };
+		var map=new google.maps.Map(document.getElementById("googleMap")
+		  ,mapProp);
+		}
 
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+								
+	  
 </head> 
 <style>
 .bgBrown{
@@ -16,6 +33,7 @@
 	display:none;
 }
 </style>
+
 
 <body>
 	<div class="page-wrap">
@@ -27,11 +45,12 @@
 			</div>
 			<div class="span10" id="school_info">
 				<div class="row-fluid">
-					<div class="span6">
+					<div class="span9">
 						<h1 id="school_name">HOLY INFANT ACADEMY</h1>
-						<i style="font-size: 15px;">75 years of expanding horizons creating impact on quality Catholic education</i>
+						<p id="school_address">Calapan City, Oriental Mindoro</p>
+						<!--<i style="font-size: 15px;">75 years of expanding horizons creating impact on quality Catholic education</i>-->
 					</div>
-					<div class="span6 hide">
+					<div class="span3 hide">
 						<input type="button" class="btn btn-primary medium offset2 span4" value="Login" />
 						<input type="button" class="btn btn-primary medium span4" value="Sign up" />
 					</div>
@@ -41,15 +60,42 @@
 		<section id="hia-content" class='row-fluid'>
 			<div class="span12">
 				<div class="tabbable">
-					<ul class="nav nav-tabs" style="font-size: 15px; font-family: Verdana;">
-						<li class="active"><a href="#home" data-toggle="tab">Home</a></li>
-						<li><a href="#discover" data-toggle="tab">Discover HIA</a></li>
-						<li><a href="#programs" data-toggle="tab">Programs</a></li>
-						<li><a href="#admission" data-toggle="tab">Admission</a></li>
+					<ul class="nav nav-tabs">
+						<li class="active">
+							<a href="#home" data-toggle="tab">Home</a>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="/index.html">
+								Discover HIA<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+								<li><a href="#MEMOIRE" data-toggle="tab">MEMOIRE</a></li>
+								<li><a href="#RAISON" data-toggle="tab">RAISON D’ETRE</a></li>
+								<li><a href="#SERVICES" data-toggle="tab">SERVICES and FACILITIES</a></li>
+								<li><a href="#OFFICERS" data-toggle="tab">OFFICERS and BOARD OF TRUSTEES</a></li>
+								<li><a href="#AFFILIATES" data-toggle="tab">AFFILIATES</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#programs" data-toggle="tab">Programs</a>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="/index.html">
+								Admission<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+								<li><a href="#REQUIREMENTS" data-toggle="tab">REQUIREMENTS</a></li>
+								<li><a href="#ENROLLMENT" data-toggle="tab">ENROLLMENT</a></li>
+								<li><a href="#SCHOLARSHIPS" data-toggle="tab">SCHOLARSHIPS</a></li>
+							</ul>
+						</li>
 						<li><a href="#campus" data-toggle="tab">Campus Life</a></li>
+						<li><a href="#online" data-toggle="tab">Online Services</a></li>
 						<li><a href="#contact" data-toggle="tab">Contact</a></li>
+						
 					</ul>
 					<div class="tab-content">
+						<!--HOME-->
 						<div class="tab-pane active" id="home">
 							<section id="slideshow" class="row-fluid">
 								<div class="span8">
@@ -58,26 +104,31 @@
 										<div class="carousel-inner thumbnails">
 											<div class="active item">
 												<a href="#" class="thumbnail">
-													<img src="img/slideshow/1.jpg" alt=""/>
-													 
+													<img src="img/slideshow/SciMaTechMo1.jpg" alt=""/> 
 												</a>
-												<h5>Thumbnail label</h5>
-												<p>Thumbnail caption...</p>
+												<h5 style="line-height: 0px;"><b>Science Math Tech Month</b></h5>
+												<h6 small>
+													<i>
+														Fr. Nestor J. Adalia formally opened the Science Math Tech Month urging the 
+														students to continue..	<a href="#">read more..</a>
+													</i>
+												</h6 small>
 											</div>
 											<div class="item">
-												<a href="#" class="thumbnail"><img src="img/slideshow/2.jpg" alt=""/></a>
-												<h5>Thumbnail label</h5>
-												<p>Thumbnail caption...</p>
+												<a href="#" class="thumbnail"><img src="img/slideshow/SciMaTechMo2.jpg" alt=""/></a>
+												<h5 style="line-height: 0px;"><b>Science Math Tech Month</b></h5>
+												<h6 small><i>short description...</i></h6 small>
+											</div>
+											<div class="item" >
+												<a href="#" class="thumbnail"><img src="img/slideshow/LeadershipTraining4.jpg" alt=""/></a>
+												<h5 style="line-height: 0px;"><b>Leadership Training</b></h5>
+												<h6 small><i>short description...</i></h6 small>
 											</div>
 											<div class="item">
-												<a href="#" class="thumbnail"><img src="img/slideshow/3.jpg" alt=""/></a>
-												<h5>Thumbnail label</h5>
-												<p>Thumbnail caption...</p>
-											</div>
-											<div class="item">
-												<a href="#" class="thumbnail"><img src="img/slideshow/4.jpg" alt=""/></a>
-												<h5>Thumbnail label</h5>
-												<p>Thumbnail caption...</p>
+												<a href="#" class="thumbnail"><img src="img/slideshow/ReligiousActivity.jpg" alt=""/></a>
+												<h5 style="line-height: 0px;"><b>Religious Activity</b></h5>
+												<h6 small><i>short description...<a href="#">read more..</a>
+												</i></h6 small>
 											</div>
 										</div>
 										<!-- Carousel nav -->
@@ -86,26 +137,68 @@
 									</div>
 								</div>
 								<div class="span4">
-									 <img src="img/75.png" alt=""  class="hide"/>
-									<div class="row-fluid">
-										<div class="span12">
-											<h4>Events</h3>
-											<hr>
-											<div class="row-fluid">
-												<div class="span6">Event Name</div>
-												<div class="span6">Jan.10,2013</div>
+									<div class="accordion" id="accordion2">
+										<div class="accordion-group">
+											<div class="accordion-heading">
+												<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+													<i class="icon-list icon-white"></i>
+													<text>Announcement</text>
+												</a>
 											</div>
-											<div class="row-fluid">
-												<div class="span6">Event Name</div>
-												<div class="span6">Jan.10,2013</div>
+											<div id="collapseOne" class="accordion-body collapse in">
+												<div class="accordion-inner">
+												
+													<div class="row-fluid">
+														<div class="span12">
+															<div class="row-fluid">
+																<div class="span6"><h6 small>3rd Periodical Examinations</h6 small></div>
+																<div class="span6"><h6 small>December 17-20, 2012</h6 small></div>
+															</div>
+															
+														</div>
+													</div>
+												</div>
 											</div>
-											<div class="row-fluid">
-												<div class="span6">Event Name</div>
-												<div class="span6">Jan.10,2013</div>
+										</div>
+										<div class="accordion-group" >
+											<div class="accordion-heading">
+												<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+													<div class="row-fluid">
+														<i class="icon-calendar icon-white"></i>
+														<text>Academic Calendar</text>
+													</div>
+												</a>
+											</div>
+											<div id="collapseTwo" class="accordion-body collapse">
+												<div class="accordion-inner">
+													<div class="row-fluid">
+														<div class="span12">
+															<div class="row-fluid">
+																<div class="span6"><h6 small>3rd Periodical Examinations</h6 small></div>
+																<div class="span6"><h6 small>December 17-18, 2012</h6 small></div>
+															</div>
+															<div class="row-fluid">
+																<div class="span6"><h6 small>Christmas Party</h6 small></div>
+																<div class="span6"><h6 small>December 19, 2012</h6 small></div>
+															</div>
+															<div class="row-fluid">
+																<div class="span6"><h6 small>Retreat</h6 small></div>
+																<div class="span6"><h6 small>December 20-21, 2012</h6 small></div>
+															</div>
+															<div class="row-fluid">
+																<div class="span6"><h6 small>Classes Resume</h6 small></div>
+																<div class="span6"><h6 small>January 7, 2013</h6 small></div>
+															</div>
+															<div class="row-fluid">
+																<div class="span6"><h6 small>Report Card Distribution</h6 small></div>
+																<div class="span6"><h6 small>January 26, 2013</h6 small></div>
+															</div>
+														</div>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
-								
 								</div>
 							</section>
 							<section class="row-fluid hide">
@@ -121,61 +214,46 @@
 										</div>
 									</div>
 								</div>
-								<div class="span4">
-									<div class="row-fluid">
-										<div class="span12">
-											<h4>Events</h3>
-											<hr>
-											<div class="row-fluid">
-												<div class="span6">Event Name</div>
-												<div class="span6">Jan.10,2013</div>
-											</div>
-											<div class="row-fluid">
-												<div class="span6">Event Name</div>
-												<div class="span6">Jan.10,2013</div>
-											</div>
-											<div class="row-fluid">
-												<div class="span6">Event Name</div>
-												<div class="span6">Jan.10,2013</div>
-											</div>
-										</div>
-									</div>
-								</div>
+								
 							</section>
 						</div>
-						<div class="tab-pane row-fluid" id="discover">
-							<div class="span12">
+						<!--DISCOVER-->
+								<section class="row-fluid hide">
+									<div class="span12 ">
+										<div class="span2 offset1"><a href="#MEMOIRE"  data-toggle="tab" class="thumbnail"><img src="img/200x250.gif" alt=""/>MEMOIRE</a></div>
+										<div class="span2"><a href="#RAISON"  data-toggle="tab" class="thumbnail"><img src="img/200x250.gif" alt=""/>RAISON D’ETRE</a></div>
+										<div class="span2"><a href="#SERVICES"  data-toggle="tab" class="thumbnail"><img src="img/200x250.gif" alt=""/>SERVICES and FACILITIES</a></div>
+										<div class="span2"><a href="#OFFICERS"  data-toggle="tab" class="thumbnail"><img src="img/200x250.gif" alt=""/>OFFICERS and BOARD OF TRUSTEES</a></div>
+										<div class="span2"><a href="#AFFILIATES" data-toggle="tab" class="thumbnail"><img src="img/200x250.gif" alt=""/>AFFILIATES</a></div>
+									</div>
 								
-								<div class="row-fluid thumb-nav hide">
-									<div class="span2 offset1"><img src="img/200x200.gif" alt=""  /><h4>MEMOIRE</h4></div>
-									<div class="span2"><img src="img/200x200.gif" alt=""  /><h4>RAISON D’ETRE</h4></div>
-									<div class="span2"><img src="img/200x200.gif" alt=""  /><h4>SERVICES and FACILITIES</h4></div>
-									<div class="span2"><img src="img/200x200.gif" alt=""  /><h4>OFFICERS and BOARD OF TRUSTEES</h4></div>
-									<div class="span2 "><img src="img/200x200.gif" alt=""  /><h4>AFFILIATES</h4></div>
-								</div>
-								<div class="row-fluid">
+								</section>
+						
+								<div class="tab-pane row-fluid" id="MEMOIRE">
 									<div class="span12">
 										<h4>MEMOIRE</h4>
-										<hr/>
-										<p>A brief history...</p>
+										<h6 small>A brief history...</h6 small>
 									</div>
 								</div>
-								<div class="row-fluid">
+								<div class="tab-pane row-fluid" id="RAISON">
 									<div class="span12">
 										<h4>RAISON D’ETRE</h3>
-										Reason for existence
-										<hr/>
+										<h6 small>Reason for our existence...</h6 small>
+										
 										<p>
-											<b>VISION</b><br/>
-											A family who lives the TRUTH IN LOVE, is actively involved in building Christian communities, in dialogue of life with the poor and in caring for Mother Earth.
+											<h5><b>VISION</b><br/></h5>
+											<h6 small>A family who lives the TRUTH IN LOVE, is actively involved in building Christian communities, 
+											in dialogue of life with the poor and in caring for Mother Earth.</h6 small>
 										</p>
 										<p>
-											<b>MISSION</b><br/>
-											We, the members of the HIA Family, animated by the Trinitarian Spirituality and Apostolic Vicariate of Calapan pastoral thrust, commit ourselves to the task
+											<h5><b>MISSION</b><br/></h5>
+											<h6 small>We, the members of the HIA Family, animated by the Trinitarian Spirituality and Apostolic 
+											Vicariate of Calapan pastoral thrust, commit ourselves to the task </h6 small>
 										</p>
 										<p>
-											<b>GOALS</b><br/>
-											Animated by the Trinitarian Spirituality and the Apostolic Vicariate of Calapan pastoral thrust, we strive to
+											<h5><b>GOALS</b><br/></h5>
+											<h6 small>Animated by the Trinitarian Spirituality and the Apostolic Vicariate of Calapan pastoral 
+											thrust, we strive to
 											<ol>
 												<li>develop the total person through a relevant and quality education rooted in Christian values;</li>
 												<li>make Christ and His values especially simplicity of life permeate our programs policies and activities;</li>
@@ -184,21 +262,24 @@
 												<li>participate in the strengthening of families and Basic Communities through the Hapag ng  Pamilyang Mindoreño;</li>
 												<li>bring ourselves and others closer to God by our dialogue of life with the poor in the community especially among indigenous people, women, children and youth;</li>
 												<li>foster  love of country and promote, preserve and develop our cultural heritage; and</li>
-												<li>care for and preserve of Mother Earth.</li>
+												<li>care for and preserve of Mother Earth.</li></h6 small>
+												
 											</ol>							
 										</p>
 										<p>
-											<b>CORE VALUES</b><br/>
+										<hr/>
+											<h5><b>CORE VALUES</b><br/></h5>
 											<ul>
-												<li>LOVING SERVICE</li>
+												<h6 small><li>LOVING SERVICE</li>
 												<li>INTEGRITY</li>
 												<li>FAITH</li>
-												<li>EXCELLENCE</li>
+												<li>EXCELLENCE</li></h6 small>
 											</ul>
 										</p>
+										<hr/>
 										<p>
-											<b>ALMA MATTER SONG</b><br/><br/>
-											O Alma Mater kind and dear<br/>
+											<h5><b>ALMA MATTER SONG</b><br/><br/></h5>
+											<h6 small>O Alma Mater kind and dear<br/>
 											We sing your praises far and near<br/>
 											At home, at school, on land and sea<br/>
 											The thought of you is dear to me.<br/>
@@ -214,23 +295,32 @@
 											Someday when farm from you we roam<br/>
 											Our thoughts will surely travel home<br/>
 											And Mem’ries sweet will be to me<br/>
-											Those dear old days that used to be.<br/>
+											Those dear old days that used to be.<br/></h6 small>
 										</p>
+										<hr/>
+									
 									</div>
 								</div>
-								<div class="row-fluid">
+								<div class="tab-pane row-fluid" id="SERVICES">
 									<div class="span12">
 										<h4>SERVICES and FACILITIES</h3>
-										<hr/>
-										<p>Contents here</p>
+										<ul>
+											<h6 small>
+											<li>Library</li>
+											<li>Computer Laboratory</li>
+											<li>Chemistry Lab</li>
+											<li>Physics Lab</li>
+											<li>Sports and Recreation Center</li>												
+											</h6 small>
+										</ul>
 									</div>
 								</div>
-								<div class="row-fluid">
+								<div class="tab-pane row-fluid" id="OFFICERS">
 									<div class="span12">
-										<h4>OFFICERS and BOARD OF TRUSTEES</h3>
-										<hr/>
+										<h4>OFFICERS and BOARD OF TRUSTEES</h4>
+										
 										<p>
-											<b>Episcopal Vicar for Catholic Educational Institutions:</b> Father Nestor J. Adalia<br/>
+											<h6 small><b>Episcopal Vicar for Catholic Educational Institutions:</b> Father Nestor J. Adalia<br/>
 											<b>Assistant Episcopal Vicar for Catholic Educational Institutions:</b> Father Luisito D. Catapang<br/>
 											<b>Secretary:</b> Ms. Ma. Gina Candelaria<br/><br/>
 											<b>Board of Trustees:</b>
@@ -250,22 +340,52 @@
 												<li>Supervisor on Academics: Mrs. Elizabeth Banawa</li>
 												<li>Coordinator on Students' Affairs & Discipline: (vacant)</li>
 												<li>Finance Secretary: Father Simplicio A. Bonquin</li>
-												<li>Coordinator on External Affairs: Father Benito S. Semilla</li>
+												<li>Coordinator on External Affairs: Father Benito S. Semilla</li></h6 small>
 											</ul>
 											
 										</p>
+										<hr/>
 									</div>
 								</div>
-								<div class="row-fluid">
-								<div class="span12">
-									<h4>AFFILIATES</h4>
-									<hr/>
-									<p>Parochial Schools - High School/Elementary     (Owned and Operated by the Diocese)<br/>
-										Episcopal Vicar for Catholic Educational Institutions<br/></p>
+								<div class="tab-pane row-fluid" id="AFFILIATES">
+									<div class="span12">
+										<h4>AFFILIATES</h4>
+										
+										<h5>Parochial Schools - High School/Elementary     (Owned and Operated by the Diocese)<br/>
+											Episcopal Vicar for Catholic Educational Institutions<br/></p></h5>
+											<ul>
+												<h6 small>
+												<li>PUERTO GALERA ACADEMY</br>
+													Puerto Galera, Oriental Mindoro</li>
+												<li>NORTHERN MINDORO ACADEMY</br>
+													San Teodoro, Oriental Mindoro</li>
+												<li>BACO CATHOLIC SCHOOL</br>
+													Baco, Oriental Mindoro</li>
+												<li>NAUJAN ACADEMY</br>
+													Naujan, Oriental Mindoro</li>
+												<li>GOOD SHEPHERD ACADEMY</br>
+													Victoria, Oriental Mindoro</li>													
+												<li>OUR LADY OF THE MOST HOLY ROSARY ACADEMY</br>
+													Loyal, Victoria, Oriental Mindoro</li>
+												<li>POLA CATHOLIC SCHOOL</br>
+													Pola, Oriental Mindoro</li>
+												<li>MINA DE ORO CATHOLIC SCHOOL</br>
+													Socorro, Oriental Mindoro</li>
+												<li>IMMACULATE HEART OF MARY ACADEMY</br>
+													Pinamalayan, Oriental Mindoro</li>
+												<li>SACRED HEART ACADEMY</br>
+													Gloria, Oriental Mindoro</li>
+												<li>ST. JOSEPH ACADEMY</br>
+													Bongabong, Oriental Mindoro</li>
+												<li>SANTO NIÑO SCHOOL OF ROXAS</br>
+													Roxas, Oriental Mindoro</li>
+												<li>MANSALAY CATHOLIC HIGH SCHOOL</br>
+													Mansalay, Oriental Mindoro</li>													
+												</h6 small>
+											</ul>
+									</div>
 								</div>
-							</div>
-							</div>
-						</div>
+						<!--PROGRAMS-->	
 						<div class="tab-pane" id="programs">
 							<div class="row-fluid hide">
 								<div class="span4 "><img src="http://placehold.it/300x300" alt=""  /><h4>PRESCHOOL</h4></div>
@@ -273,76 +393,93 @@
 								<div class="span4 "><img src="http://placehold.it/300x300" alt=""  /><h4>HIGH SCHOOL</h4></div>
 							</div>
 							<h4>PRESCHOOL</h4>
-							<hr>
+							
 							<ul>
+								<h6 small>
 								<li>NURSERY (3 years old by October)</li>
 								<li>KINDER 1 (4 years old by October)</li>
-								<li>KINDER 2 (5 years old by October)</li>
+								<li>KINDER 2 (5 years old by October)</li> </h6 small>
 							</ul>
+							<hr>
 							<h4>GRADE SCHOOL</h4>
-							<hr>	
+								
 							<ul>
+								<h6 small>
 								<li>Special Science Class (Grade 1-6)</li>
+								</h6 small>
 							</ul>
+							<hr>
 							<h4>HIGH SCHOOL</h4>
-							<hr>	
+								
 							<ul>
+								<h6 small>
 								<li>Special Science Class (I-IV)</li>
+								</h6 small>
 							</ul>
 						</div>
-						<div class="tab-pane" id="admission">
+						<!--ADMISSION-->	
+	
 							<div class="row-fluid hide">
 								<div class="span4 "><img src="http://placehold.it/300x300" alt=""  /><h4>REQUIREMENTS</h4></div>
 								<div class="span4"><img src="http://placehold.it/300x300" alt=""  /><h4>ENROLLMENT PROCEDURE</h4></div>
 								<div class="span4 "><img src="http://placehold.it/300x300" alt=""  /><h4>SCHOLARSHIPS</h4></div>
 							</div>
-							<h4>REQUIREMENTS</h4>
-							<hr>
-								<ul>
-									<li>PRESCHOOL
-										<ol>
-											<li>Original and Photocopy of Birth Certificate (NSO)</li>
-											<li>Interview</li>
+							<div class="tab-pane row-fluid" id="REQUIREMENTS">
+								<div class="span12">
+									<h4>REQUIREMENTS</h4>
+								
+									<ul>
+										<h6 small>
+										<li><b>PRESCHOOL</b>
+											<ol>
+												<li>Original and Photocopy of Birth Certificate (NSO)</li>
+												<li>Interview</li>
+												
+											</ol>
+										</li>
+										<li><b>INCOMING GRADE ONE</b>
+											<ol>
+												<li>Original Copy of Report Card (Form 138) duly signed by the Principal</li>
+												<li>Original and Photocopy of Birth Certificate (NSO)</li>
+												<li>Baptismal Certificate</li>
+												<li>Interview</li>
+											</ol>
+										</li>
+										<li><b>INCOMING FRESHMEN/Grade Seven</b>
+											<ol>
+												<li>Original Copy of Report Card (Form 138) duly signed by the Principal</li>
+												<li>Original and Photocopy of Birth Certificate (NSO)</li>
+												<li>Certificate of Good Moral Conduct from the Principal</li>
+												<li>Baptismal Certificate</li>
+												<li>Interview</li>
+											</ol>
 											
-										</ol>
-									</li>
-									<li>INCOMING GRADE ONE
-										<ol>
-											<li>Original Copy of Report Card (Form 138) duly signed by the Principal</li>
-											<li>Original and Photocopy of Birth Certificate (NSO)</li>
-											<li>Baptismal Certificate</li>
-											<li>Interview</li>
-										</ol>
-									</li>
-									<li>INCOMING FRESHMEN/Grade Seven
-										<ol>
-											<li>Original Copy of Report Card (Form 138) duly signed by the Principal</li>
-											<li>Original and Photocopy of Birth Certificate (NSO)</li>
-											<li>Certificate of Good Moral Conduct from the Principal</li>
-											<li>Baptismal Certificate</li>
-											<li>Interview</li>
-										</ol>
-										
-									</li>
-									<li>TRANFEREES ( All Levels)
-										<ol>
-											<li>Original Copy of Report Card (Form 138) duly signed by the Principal</li>
-											<li>Original and Photocopy of Birth Certificate (NSO)</li>
-											<li>Certificate of Good Moral Conduct from the Principal</li>
-											<li>Baptismal Certificate</li>
-											<li>Interview</li>
-										</ol>
-										
-									</li>
-									<li>OLD STUDENTS
-										<ol>
-											<li>Report Card</li>
-										</ol>
-									</li>
-								</ul>
+										</li>
+										<li><b>TRANFEREES ( All Levels)</b>
+											<ol>
+												<li>Original Copy of Report Card (Form 138) duly signed by the Principal</li>
+												<li>Original and Photocopy of Birth Certificate (NSO)</li>
+												<li>Certificate of Good Moral Conduct from the Principal</li>
+												<li>Baptismal Certificate</li>
+												<li>Interview</li>
+											</ol>
+											
+										</li>
+										<li><b>OLD STUDENTS</b>
+											<ol>
+												<li>Report Card</li>
+											</ol>
+										</li>
+										</h6 small>
+									</ul>
+									<hr>
+								</div>
+							</div>
+							<div class="tab-pane row-fluid" id="ENROLLMENT">
+							
 							<h4>ENROLLMENT</h4>
 							<hr>
-								<p><b>ENROLLMENT PROCEDURE</b><br/>
+								<h6 small><b>ENROLLMENT PROCEDURE</b><br/>
 								Enrolment serves as a vital part in the life of every student/pupil upon entering schools, either public or in private. It gives the students/pupils the impression on how the whole institute manages and manipulates the entire body. Moreover, enrolment serves as the first experience of all students/pupils by which he/she takes part either individually or with company of a parent or some relatives.
 								</p>
 								<ul>
@@ -365,13 +502,13 @@
 									</li>
 								</ul>
 							
-							<p>
+							
 							<b>PRE-ENROLLMENT</b><br/>
 							Pre-enrollment is done   every February of the current year to check the outstanding population and serves as preparation for the next school year. Students from Preschool / Grade Six who wish to enroll are given registration form to fill up. Registration forms are also given to other students who are interested to enroll during the Campaign Period.    
-							</p>
+							<hr>
 							
 							<b>ENROLLMENT PROCESS</b><br/>
-								<p>FOR PRESCHOOL/GRADE ONE/FRESHMEN/TRANFEREES
+								FOR PRESCHOOL/GRADE ONE/FRESHMEN/TRANFEREES
 									<ul>
 										<li>	STEP 1
 											<ul>
@@ -415,46 +552,80 @@
 											</ul>
 										</li>
 									</ul>
-								</p>
-							
+								</h6 small>
+							</div>
+							<div class="tab-pane row-fluid" id="SCHOLARSHIPS">
 							<h4>SCHOLARSHIPS</h4>
-							<hr>
-							<p>Content here</p> 
-						</div>
+							
+							<h6 small>Content here</h6 small> 
+							</div>
+						<!--CAMPUS-->
 						<div class="tab-pane" id="campus">
 							<div class="row-fluid hide">
 								<div class="span4 "><img src="http://placehold.it/300x300" alt=""  /><h4>FEATURED STUDENTS</h4></div>
 								<div class="span4"><img src="http://placehold.it/300x300" alt=""  /><h4>ORGS and CLUBS</h4></div>
 								<div class="span4 "><img src="http://placehold.it/300x300" alt=""  /><h4>COMMUNITY OUTREACH</h4></div>
 							</div>
-							<h4>FEATURED STUDENTS</h4>
 							<hr>
-							<p>Content here</p> 
+							<h4>FEATURED STUDENTS</h4>							
+							<h6 small>Content here</h6 small> 
+							<hr>
 							<h4>ORGS and CLUBS</h4>
+							<ul>
+									<h6 small>
+									<li>GS Clubs</li>
+									<li>HS Clubs</li>
+									</h6 small>
+								</ul>
 							<hr>
-							<p>Content here</p> 
 							<h4>COMMUNITY OUTREACH</h4>
-							<hr>
-							<p>Content here</p> 
-							
+							<h6 small>Content here</h6 small> 	
 						</div>
+						<!--ONLINE SERVICES-->
+						<div class="tab-pane" id="online">
+							<div class="span12">
+								<h4>Online Inquiry and Assessment</h4>
+								<ul>
+									<h6 small>
+									<li>Inquiry</li>
+									<li>Assessment of Fees</li>
+									</h6 small>
+								</ul>
+								<h4>Download Forms</h4>
+								<ul>
+									<h6 small>
+									<li>New Student Application Form</li>
+									<li>Scholarship Application Form</li>
+									</h6 small>
+								</ul>	
+								<h4>Portals</h4>
+								<ul>
+									<h6 small>
+									<li>My HIA, the Student's Portal</li>
+									<li>Parents' Portal</li>
+									</h6 small>
+								</ul>									
+								
+							</div>	
+						</div>
+						<!--CONTACT-->
 						<div class="tab-pane" id="contact">
 							<div class="row-fluid span12">
 								<div class="span6">
-									<a href="#">
+									<!-- <a href="#">
 										<img src="img/HIA-map.jpg" alt=""/>
-									</a>
+									</a> -->
+									<div id="googleMap" style="width:500px;height:380px;"></div>
 								</div>
 								<div class="span6">
 									<address> 
-									<strong>Holy Infant Academy</strong><br> 
-									Calapan City, 5200<br> 
+									<h4>Holy Infant Academy</h4><br> 
+									<h6 small>Calapan City, 5200<br> 
 									 Oriental Mindoro, Philippines<br> 
-									<abbr title="Phone">P:</abbr> +63 43 288-1019
+									<abbr title="Phone">P:</abbr> +63 43 288-1019 </h6 small>
 									</address>
 								</div>
-							</div>
-							
+							</div>	
 						</div>
 					</div>
 				</div>
@@ -466,3 +637,4 @@
 	</div>
 </body>
 </html>
+
